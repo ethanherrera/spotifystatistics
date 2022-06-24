@@ -5,7 +5,7 @@ import GetArtists from "./GetArtists";
 const CLIENT_ID = "fa60583b5fcf419693fa909755dfcd7a";
 const SPOTIFY_AUTHORIZE_ENDPOINT = "https://accounts.spotify.com/authorize";
 const REDIRECT_URL_AFTER_LOGIN =
-  "https://ethanherrera.github.io/spotifystatistics";
+  "https://ethanherrera.github.io/spotifystatistics/";
 const SCOPES = ["user-top-read"];
 const SCOPES_URL_PARAM = SCOPES.join("%20");
 
