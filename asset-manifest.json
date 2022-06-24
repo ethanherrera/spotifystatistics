@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/ethanherrera/spotifystatistics.git/static/css/main.abd64e84.css",
-    "main.js": "/ethanherrera/spotifystatistics.git/static/js/main.a8620cb4.js",
-    "index.html": "/ethanherrera/spotifystatistics.git/index.html",
-    "main.abd64e84.css.map": "/ethanherrera/spotifystatistics.git/static/css/main.abd64e84.css.map",
-    "main.a8620cb4.js.map": "/ethanherrera/spotifystatistics.git/static/js/main.a8620cb4.js.map"
+    "main.css": "/spotifystatistics/static/css/main.abd64e84.css",
+    "main.js": "/spotifystatistics/static/js/main.a8620cb4.js",
+    "index.html": "/spotifystatistics/index.html",
+    "main.abd64e84.css.map": "/spotifystatistics/static/css/main.abd64e84.css.map",
+    "main.a8620cb4.js.map": "/spotifystatistics/static/js/main.a8620cb4.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
