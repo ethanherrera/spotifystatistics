@@ -9,7 +9,7 @@ function handleLogin() {
   window.location = `${SPOTIFY_AUTHORIZE_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URL_AFTER_LOGIN}&scope=${SCOPES_URL_PARAM}&response_type=token&show_dialog=true`;
 }
 
-const getReturnedParamsFromSpotifyAuth = (hash) => {
+export function getReturnedParamsFromSpotifyAuth(hash) {
   const stringAfterHashtag = hash.substring(1);
   const paramsInUrl = stringAfterHashtag.split("&");
   const paramsSplitUp = paramsInUrl.reduce((accumulater, currentValue) => {
@@ -20,7 +20,7 @@ const getReturnedParamsFromSpotifyAuth = (hash) => {
   }, {});
   console.log(paramsSplitUp);
   return paramsSplitUp;
-};
+}
 
 function LoginButton() {
   return (
@@ -31,4 +31,3 @@ function LoginButton() {
 }
 
 export default LoginButton;
-export { getReturnedParamsFromSpotifyAuth };
