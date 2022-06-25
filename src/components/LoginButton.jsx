@@ -29,3 +29,6 @@ function LoginButton() {
     </>
   );
 }
+
+export default LoginButton;
+export { getReturnedParamsFromSpotifyAuth };
