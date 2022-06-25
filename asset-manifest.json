@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/spotifystatistics/static/css/main.abd64e84.css",
-    "main.js": "/spotifystatistics/static/js/main.ab77fde8.js",
+    "main.js": "/spotifystatistics/static/js/main.8bdf64cc.js",
     "index.html": "/spotifystatistics/index.html",
     "main.abd64e84.css.map": "/spotifystatistics/static/css/main.abd64e84.css.map",
-    "main.ab77fde8.js.map": "/spotifystatistics/static/js/main.ab77fde8.js.map"
+    "main.8bdf64cc.js.map": "/spotifystatistics/static/js/main.8bdf64cc.js.map"
   },
   "entrypoints": [
     "static/css/main.abd64e84.css",
-    "static/js/main.ab77fde8.js"
+    "static/js/main.8bdf64cc.js"
   ]
 }
