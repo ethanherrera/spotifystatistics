@@ -10,7 +10,7 @@ function GetArtists() {
     if (localStorage.getItem("accessToken")) {
       setToken(localStorage.getItem("accessToken"));
     }
-  }, [token]);
+  }, []);
 
   const handleButton = () => {
     axios
