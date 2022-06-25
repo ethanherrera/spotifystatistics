@@ -1,10 +1,10 @@
 import React, { useEffect, useState, useContext } from "react";
-import { SelectedTabContext } from "./App";
+import { SelectedTabContext } from "../App";
 import axios from "axios";
 
-const TOP_ARTISTS_ENDPOINT = "https://api.spotify.com/v1/me/top/artists";
+const TOP_TRACKS_ENDPOINT = "https://api.spotify.com/v1/me/top/tracks";
 
-function GetArtists(props) {
+function GetSongs(props) {
   const [token, setToken] = useState("");
   const [data, setData] = useState({});
   const selectedTab = useContext(SelectedTabContext);
@@ -15,9 +15,9 @@ function GetArtists(props) {
   }, []);
 
   const handleButton = () => {
-    props.setTab("artists");
+    props.setTab("songs");
     axios
-      .get(TOP_ARTISTS_ENDPOINT, {
+      .get(TOP_TRACKS_ENDPOINT, {
         headers: {
           Authorization: "Bearer " + token,
         },
@@ -28,18 +28,19 @@ function GetArtists(props) {
       .catch((err) => {
         console.log(err);
       });
+    console.log(data);
   };
   return (
     <>
-      <button onClick={handleButton}>Get Artists</button>
-      {data?.items && selectedTab === "artists"
+      <button onClick={handleButton}>Get Songs</button>
+      {data?.items && selectedTab === "songs"
         ? data.items.map((item, index) => (
             <>
               <p>
                 {index + 1}. {item.name}
               </p>
               <img
-                src={item.images[0].url}
+                src={item.album.images[0].url}
                 width="300px"
                 height="300px"
                 alt={item.name + " image"}
@@ -51,4 +52,4 @@ function GetArtists(props) {
   );
 }
 
-export default GetArtists;
+export default GetSongs;

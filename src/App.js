@@ -1,9 +1,11 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import LoginButton from "./components/LoginButton";
 import GetArtists from "./GetArtists";
+import GetSongs from "./components/GetSongs";
 import { getReturnedParamsFromSpotifyAuth } from "./components/LoginButton";
 
+export const SelectedTabContext = React.createContext();
 function App() {
   const [loggedIn, setloggedIn] = useState(false);
   useEffect(() => {
@@ -17,11 +19,16 @@ function App() {
       localStorage.setItem("tokenType", token_type);
       setloggedIn(true);
     }
-  });
+  }, []);
+  const [tab, setTab] = useState("artists");
   return (
     <div className="App">
-      {!loggedIn ? <LoginButton /> : null}
-      {loggedIn ? <GetArtists /> : null}
+      <SelectedTabContext.Provider value={tab}>
+        {!loggedIn ? <LoginButton setTab={setTab} /> : null}
+        {loggedIn ? <GetSongs setTab={setTab} /> : null}
+        {loggedIn ? <GetArtists setTab={setTab} /> : null}
+      </SelectedTabContext.Provider>
+      <div id="content"></div>
     </div>
   );
 }
